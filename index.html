@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猫カフェ ねこのひだまり</title>
+  <meta name="description" content="猫カフェ ねこのひだまりは、保護猫・里親募集中の猫を中心としたカフェです。のびのびとした猫たちとの触れ合いをお楽しみください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== オープニング背景(全画面・背景固定) ========== -->
+  <!-- 動画素材を用意したら video 要素に差し替え可能 -->
+  <div class="op-video op-video--placeholder" aria-hidden="true">
+  </div>
+
+  <div class="top-area">
+    <a href="#head" class="scroll">
+      <span class="scroll__circle"></span>
+      Scroll
+    </a>
+  </div>
+
+  <!-- ========== ヘッダー(スライドショー+ナビ) ========== -->
+  <header id="head" class="header">
+    <div class="slideshow" aria-hidden="true">
+      <div class="slide slide--1"></div>
+      <div class="slide slide--2"></div>
+      <div class="slide slide--3"></div>
+      <div class="slide slide--4"></div>
+      <div class="slide slide--5"></div>
+    </div>
+    <p class="slide-text">CATCAFE HIDAMARI</p>
+
+    <div class="header__logo">
+      <img class="header__logo-mark" src="images/brand-mark.svg" alt="">
+      <span class="header__logo-text">猫カフェ<br>ねこのひだまり</span>
+    </div>
+
+    <nav class="nav">
+      <input type="checkbox" id="nav-toggle" class="nav__toggle">
+      <label for="nav-toggle" class="nav__button" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav__list">
+        <li><a href="#head">Home</a></li>
+        <li><a href="#concept">ひだまり</a></li>
+        <li><a href="#concept">猫の紹介</a></li>
+        <li><a href="#info">料金</a></li>
+        <li><a href="#info">入店のご案内</a></li>
+        <li><a href="#news">おしらせ</a></li>
+        <li><a href="#concept">里親希望の方へ</a></li>
+        <li><a href="#sns">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== CONCEPT ========== -->
+    <section id="concept" class="section section--pattern">
+      <div class="contents">
+        <p class="page-title">CONCEPT</p>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <h1 class="concept__text">
+          猫カフェ ねこのひだまりは、<br class="sp">保護猫、里親募集中の猫を中心としたカフェです。<br>
+          のびのびとした猫たちと触れ合いが楽しめます。<br>
+          保護猫の里親も募集しております。<br class="sp">詳しくはスタッフまでお問い合わせください。<br>
+          ひだまりでゆったりとした癒しの時間をお楽しみください。
+        </h1>
+        <div class="concept__photos">
+          <img class="photo photo--a" src="images/cafe-hero-02.jpg" alt="カフェのテーブルから顔をのぞかせるキジトラ猫">
+          <img class="photo photo--b" src="images/cafe-hero-03.jpg" alt="日差しの入る店内で寄り添う2匹の猫">
+          <img class="photo photo--c" src="images/cafe-hero-01.jpg" alt="窓辺でのびをする白黒猫">
+        </div>
+      </div>
+    </section>
+
+    <!-- 写真背景の帯 -->
+    <div class="fixed-bg fixed-bg--1" aria-hidden="true"></div>
+
+    <!-- ========== おしらせ ========== -->
+    <section id="news" class="section section--pattern-light">
+      <div class="contents">
+        <h2 class="page-title page-title--ja">おしらせ</h2>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <div class="news">
+          <ul class="news__list">
+            <li><a href="#"><time class="news__date">08/17</time><h3 class="news__title">夏季休業のお知らせ</h3></a></li>
+            <li><a href="#"><time class="news__date">07/02</time><h3 class="news__title">新しい仲間「みたらし」が加わりました</h3></a></li>
+            <li><a href="#"><time class="news__date">05/20</time><h3 class="news__title">【重要】料金改定のお知らせ</h3></a></li>
+            <li><a href="#"><time class="news__date">04/11</time><h3 class="news__title">猫ヨガ教室開催のお知らせ</h3></a></li>
+            <li><a href="#"><time class="news__date">03/01</time><h3 class="news__title">寄付のお願い</h3></a></li>
+            <li><a href="#"><time class="news__date">01/05</time><h3 class="news__title">新年のごあいさつ</h3></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed-bg fixed-bg--2" aria-hidden="true"></div>
+
+    <!-- ========== INFORMATION ========== -->
+    <section id="info" class="section section--pattern">
+      <div class="contents">
+        <h2 class="page-title">INFORMATION</h2>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <div class="info">
+          <img class="info__photo" src="images/cafe-exterior.jpg" alt="木の扉と大きな窓のある架空の猫カフェ外観">
+          <div class="info__text">
+            <p>
+              住所:〇〇市駅前1丁目2-3 ひだまりビル1階<br>
+              Open:12:00 / Close:20:00<br>
+              定休日:火曜日
+            </p>
+            <div class="info__access">
+              <p>アクセス</p>
+              <ul>
+                <li>〇〇駅北口から、徒歩約3分</li>
+                <li>専用駐車場はございません。<br>近隣のコインパーキングをご利用ください</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed-bg fixed-bg--3" aria-hidden="true"></div>
+
+    <!-- ========== SNS ========== -->
+    <section id="sns" class="section section--pattern-light">
+      <div class="contents">
+        <h2 class="page-title">SNS</h2>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <ul class="sns">
+          <li><a href="#" class="sns__icon" aria-label="X">𝕏</a></li>
+          <li><a href="#" class="sns__icon" aria-label="Instagram"><img src="images/instagram.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== フッター ========== -->
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li><a href="#concept">ひだまり</a></li>
+      <li><a href="#concept">猫の紹介</a></li>
+      <li><a href="#info">料金</a></li>
+      <li><a href="#info">入店のご案内</a></li>
+      <li><a href="#news">おしらせ</a></li>
+      <li><a href="#concept">里親希望の方へ</a></li>
+      <li><a href="#sns">Contact</a></li>
+    </ul>
+    <div class="footer__logo"><img src="images/brand-mark.svg" alt=""> 猫カフェ ねこのひだまり</div>
+    <small class="footer__copy">&copy; 2026 CATCAFE HIDAMARI</small>
+  </footer>
+
+</body>
+</html>
