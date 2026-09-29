@@ -12,10 +12,10 @@
 </head>
 <body>
 
-  <!-- ========== オープニング背景(全画面・背景固定) ========== -->
-  <!-- 動画素材を用意したら video 要素に差し替え可能 -->
-  <div class="op-video op-video--placeholder" aria-hidden="true">
-  </div>
+  <!-- ========== オープニング動画(全画面・背景固定) ========== -->
+  <video class="op-video" autoplay muted loop playsinline poster="images/cafe-hero-01.jpg" aria-hidden="true">
+    <source src="images/opening.mp4" type="video/mp4">
+  </video>
 
   <div class="top-area">
     <a href="#head" class="scroll">
@@ -49,7 +49,7 @@
         <li><a href="#head">Home</a></li>
         <li><a href="#concept">ひだまり</a></li>
         <li><a href="#concept">猫の紹介</a></li>
-        <li><a href="#info">料金</a></li>
+        <li><a href="#price">料金</a></li>
         <li><a href="#info">入店のご案内</a></li>
         <li><a href="#news">おしらせ</a></li>
         <li><a href="#concept">里親希望の方へ</a></li>
@@ -96,6 +96,33 @@
             <li><a href="#"><time class="news__date">01/05</time><h3 class="news__title">新年のごあいさつ</h3></a></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICE ========== -->
+    <section id="price" class="section section--pattern">
+      <div class="contents">
+        <h2 class="page-title">PRICE</h2>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <ul class="price">
+          <li class="price__item">
+            <h3 class="price__name">30分コース</h3>
+            <p class="price__amount">¥1,000</p>
+            <p class="price__note">ワンドリンク付き</p>
+          </li>
+          <li class="price__item price__item--recommend">
+            <span class="price__badge">おすすめ</span>
+            <h3 class="price__name">60分コース</h3>
+            <p class="price__amount">¥1,700</p>
+            <p class="price__note">ワンドリンク付き</p>
+          </li>
+          <li class="price__item">
+            <h3 class="price__name">フリータイム</h3>
+            <p class="price__amount">¥2,800</p>
+            <p class="price__note">ドリンクおかわり自由</p>
+          </li>
+        </ul>
+        <p class="price__caption">※ 延長は10分ごとに¥200。小学生以下は半額です。</p>
       </div>
     </section>
 
@@ -146,7 +173,7 @@
     <ul class="footer__nav">
       <li><a href="#concept">ひだまり</a></li>
       <li><a href="#concept">猫の紹介</a></li>
-      <li><a href="#info">料金</a></li>
+      <li><a href="#price">料金</a></li>
       <li><a href="#info">入店のご案内</a></li>
       <li><a href="#news">おしらせ</a></li>
       <li><a href="#concept">里親希望の方へ</a></li>
