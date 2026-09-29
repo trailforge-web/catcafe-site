@@ -12,20 +12,8 @@
 </head>
 <body>
 
-  <!-- ========== オープニング動画(全画面・背景固定) ========== -->
-  <video class="op-video" autoplay muted loop playsinline poster="images/cafe-hero-01.jpg" aria-hidden="true">
-    <source src="images/opening.mp4" type="video/mp4">
-  </video>
-
-  <div class="top-area">
-    <a href="#head" class="scroll">
-      <span class="scroll__circle"></span>
-      Scroll
-    </a>
-  </div>
-
-  <!-- ========== ヘッダー(スライドショー+ナビ) ========== -->
-  <header id="head" class="header">
+  <!-- ========== ヘッダー(スライドショー+ロゴ・タイトル・ナビ) ========== -->
+  <header id="top" class="header">
     <div class="slideshow" aria-hidden="true">
       <div class="slide slide--1"></div>
       <div class="slide slide--2"></div>
@@ -33,12 +21,18 @@
       <div class="slide slide--4"></div>
       <div class="slide slide--5"></div>
     </div>
-    <p class="slide-text">CATCAFE HIDAMARI</p>
 
     <div class="header__logo">
       <img class="header__logo-mark" src="images/brand-mark.svg" alt="">
       <span class="header__logo-text">猫カフェ<br>ねこのひだまり</span>
     </div>
+
+    <p class="header__title">CATCAFE HIDAMARI</p>
+
+    <a href="#concept" class="scroll">
+      <span class="scroll__circle"></span>
+      Scroll
+    </a>
 
     <nav class="nav">
       <input type="checkbox" id="nav-toggle" class="nav__toggle">
@@ -46,23 +40,24 @@
         <span></span><span></span><span></span>
       </label>
       <ul class="nav__list">
-        <li><a href="#head">Home</a></li>
+        <li><a href="#top">Home</a></li>
         <li><a href="#concept">ひだまり</a></li>
-        <li><a href="#concept">猫の紹介</a></li>
+        <li><a href="#cats">猫の紹介</a></li>
         <li><a href="#price">料金</a></li>
         <li><a href="#info">入店のご案内</a></li>
         <li><a href="#news">おしらせ</a></li>
-        <li><a href="#concept">里親希望の方へ</a></li>
-        <li><a href="#sns">Contact</a></li>
+        <li><a href="#foster">里親希望の方へ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- ========== CONCEPT ========== -->
+    <!-- ========== CONCEPT(ひだまり) ========== -->
     <section id="concept" class="section section--pattern">
       <div class="contents">
         <p class="page-title">CONCEPT</p>
+        <p class="page-sub">ひだまりについて</p>
         <img class="title-cat" src="images/brand-mark.svg" alt="">
         <h1 class="concept__text">
           猫カフェ ねこのひだまりは、<br class="sp">保護猫、里親募集中の猫を中心としたカフェです。<br>
@@ -71,9 +66,9 @@
           ひだまりでゆったりとした癒しの時間をお楽しみください。
         </h1>
         <div class="concept__photos">
-          <img class="photo photo--a" src="images/cafe-hero-02.jpg" alt="カフェのテーブルから顔をのぞかせるキジトラ猫">
+          <img class="photo photo--a" src="images/cafe-hero-02.jpg" alt="床に座ってこちらを見るキジトラ猫">
           <img class="photo photo--b" src="images/cafe-hero-03.jpg" alt="日差しの入る店内で寄り添う2匹の猫">
-          <img class="photo photo--c" src="images/cafe-hero-01.jpg" alt="窓辺でのびをする白黒猫">
+          <img class="photo photo--c" src="images/cafe-hero-01.jpg" alt="窓辺でくつろぐ長毛の猫">
         </div>
       </div>
     </section>
@@ -81,28 +76,48 @@
     <!-- 写真背景の帯 -->
     <div class="fixed-bg fixed-bg--1" aria-hidden="true"></div>
 
-    <!-- ========== おしらせ ========== -->
-    <section id="news" class="section section--pattern-light">
+    <!-- ========== CATS(猫の紹介) ========== -->
+    <section id="cats" class="section section--pattern-light">
       <div class="contents">
-        <h2 class="page-title page-title--ja">おしらせ</h2>
+        <h2 class="page-title">CATS</h2>
+        <p class="page-sub">猫の紹介</p>
         <img class="title-cat" src="images/brand-mark.svg" alt="">
-        <div class="news">
-          <ul class="news__list">
-            <li><a href="#"><time class="news__date">08/17</time><h3 class="news__title">夏季休業のお知らせ</h3></a></li>
-            <li><a href="#"><time class="news__date">07/02</time><h3 class="news__title">新しい仲間「みたらし」が加わりました</h3></a></li>
-            <li><a href="#"><time class="news__date">05/20</time><h3 class="news__title">【重要】料金改定のお知らせ</h3></a></li>
-            <li><a href="#"><time class="news__date">04/11</time><h3 class="news__title">猫ヨガ教室開催のお知らせ</h3></a></li>
-            <li><a href="#"><time class="news__date">03/01</time><h3 class="news__title">寄付のお願い</h3></a></li>
-            <li><a href="#"><time class="news__date">01/05</time><h3 class="news__title">新年のごあいさつ</h3></a></li>
-          </ul>
-        </div>
+        <!-- TODO: 各猫の個別写真ができたら src を差し替え(今は店内写真を切り抜き表示) -->
+        <ul class="cats">
+          <li class="cat">
+            <img class="cat__img" src="images/cafe-hero-04.jpg" alt="ソファでくつろぐ茶トラ猫" style="object-position: 42% center;">
+            <h3 class="cat__name">こむぎ <span>♀ 3歳</span></h3>
+            <p class="cat__text">人懐っこい看板娘。膝の上が大好き。</p>
+          </li>
+          <li class="cat">
+            <img class="cat__img" src="images/cafe-hero-02.jpg" alt="床でこちらを見るキジトラ猫" style="object-position: 52% center;">
+            <h3 class="cat__name">だいず <span>♂ 5歳</span></h3>
+            <p class="cat__text">好奇心旺盛。お客さんの顔をのぞきに来ます。</p>
+          </li>
+          <li class="cat">
+            <img class="cat__img" src="images/cafe-hero-01.jpg" alt="窓辺でくつろぐ長毛の猫" style="object-position: 68% center;">
+            <h3 class="cat__name">しらたま <span>♀ 7歳</span></h3>
+            <p class="cat__text">窓辺が定位置のおっとりお姉さん。</p>
+          </li>
+          <li class="cat">
+            <img class="cat__img" src="images/cafe-hero-03.jpg" alt="ラグの上で目を閉じる三毛猫" style="object-position: 30% center;">
+            <h3 class="cat__name">みけ <span>♀ 4歳</span></h3>
+            <p class="cat__text">お昼寝名人。ひなたを見つける天才です。</p>
+          </li>
+          <li class="cat">
+            <img class="cat__img" src="images/cafe-hero-05.jpg" alt="床でのびをするハチワレ猫" style="object-position: 40% center;">
+            <h3 class="cat__name">おはぎ <span>♂ 1歳</span></h3>
+            <p class="cat__text">遊び盛りのやんちゃ坊主。里親募集中。</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ========== PRICE ========== -->
+    <!-- ========== PRICE(料金) ========== -->
     <section id="price" class="section section--pattern">
       <div class="contents">
         <h2 class="page-title">PRICE</h2>
+        <p class="page-sub">料金</p>
         <img class="title-cat" src="images/brand-mark.svg" alt="">
         <ul class="price">
           <li class="price__item">
@@ -128,17 +143,18 @@
 
     <div class="fixed-bg fixed-bg--2" aria-hidden="true"></div>
 
-    <!-- ========== INFORMATION ========== -->
-    <section id="info" class="section section--pattern">
+    <!-- ========== INFORMATION(入店のご案内) ========== -->
+    <section id="info" class="section section--pattern-light">
       <div class="contents">
         <h2 class="page-title">INFORMATION</h2>
+        <p class="page-sub">入店のご案内</p>
         <img class="title-cat" src="images/brand-mark.svg" alt="">
         <div class="info">
-          <img class="info__photo" src="images/cafe-exterior.jpg" alt="木の扉と大きな窓のある架空の猫カフェ外観">
+          <img class="info__photo" src="images/cafe-exterior.jpg" alt="木の扉と大きな窓のある猫カフェ外観">
           <div class="info__text">
             <p>
               住所:〇〇市駅前1丁目2-3 ひだまりビル1階<br>
-              Open:12:00 / Close:20:00<br>
+              Open:12:00 / Close:20:00(最終入店 19:00)<br>
               定休日:火曜日
             </p>
             <div class="info__access">
@@ -150,38 +166,120 @@
             </div>
           </div>
         </div>
+
+        <div class="rules">
+          <h3 class="rules__title">ご入店時のお願い</h3>
+          <ol class="rules__list">
+            <li>入店時に手洗い・消毒をお願いします</li>
+            <li>寝ている猫は起こさず、そっと見守ってください</li>
+            <li>無理な抱っこや追いかけはご遠慮ください</li>
+            <li>フラッシュ撮影はご遠慮ください</li>
+            <li>猫へのおやつは店内販売のもののみお願いします</li>
+            <li>小学生以下のお子さまは保護者の方とご一緒にどうぞ</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWS(おしらせ) ========== -->
+    <section id="news" class="section section--pattern">
+      <div class="contents">
+        <h2 class="page-title">NEWS</h2>
+        <p class="page-sub">おしらせ</p>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <div class="news">
+          <ul class="news__list">
+            <li><a href="#news"><time class="news__date">08/17</time><h3 class="news__title">夏季休業のお知らせ</h3></a></li>
+            <li><a href="#news"><time class="news__date">07/02</time><h3 class="news__title">新しい仲間「おはぎ」が加わりました</h3></a></li>
+            <li><a href="#news"><time class="news__date">05/20</time><h3 class="news__title">【重要】料金改定のお知らせ</h3></a></li>
+            <li><a href="#news"><time class="news__date">04/11</time><h3 class="news__title">猫ヨガ教室開催のお知らせ</h3></a></li>
+            <li><a href="#news"><time class="news__date">03/01</time><h3 class="news__title">寄付のお願い</h3></a></li>
+            <li><a href="#news"><time class="news__date">01/05</time><h3 class="news__title">新年のごあいさつ</h3></a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <div class="fixed-bg fixed-bg--3" aria-hidden="true"></div>
 
-    <!-- ========== SNS ========== -->
-    <section id="sns" class="section section--pattern-light">
+    <!-- ========== FOSTER(里親希望の方へ) ========== -->
+    <section id="foster" class="section section--pattern-light">
       <div class="contents">
-        <h2 class="page-title">SNS</h2>
+        <h2 class="page-title">FOSTER</h2>
+        <p class="page-sub">里親希望の方へ</p>
         <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <p class="foster__lead">
+          ひだまりの猫たちの多くは、<br class="sp">新しい家族を待っている保護猫です。<br>
+          気になる子がいたら、<br class="sp">お気軽にスタッフへお声がけください。
+        </p>
+        <ol class="flow">
+          <li class="flow__step">
+            <span class="flow__num">01</span>
+            <h3>ご来店・ご相談</h3>
+            <p>カフェで猫たちと触れ合いながら、気になる子の性格をお伝えします。</p>
+          </li>
+          <li class="flow__step">
+            <span class="flow__num">02</span>
+            <h3>お申し込み</h3>
+            <p>申込書にご記入いただき、飼育環境などをお伺いします。</p>
+          </li>
+          <li class="flow__step">
+            <span class="flow__num">03</span>
+            <h3>トライアル</h3>
+            <p>ご自宅で約2週間、一緒に暮らしてみていただきます。</p>
+          </li>
+          <li class="flow__step">
+            <span class="flow__num">04</span>
+            <h3>正式譲渡</h3>
+            <p>双方が安心できたら、正式に家族としてお迎えください。</p>
+          </li>
+        </ol>
+        <p class="foster__note">※ 譲渡には条件がございます。詳しくはお問い合わせください。</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section section--pattern">
+      <div class="contents">
+        <h2 class="page-title">CONTACT</h2>
+        <p class="page-sub">お問い合わせ</p>
+        <img class="title-cat" src="images/brand-mark.svg" alt="">
+        <p class="contact__lead">ご予約・里親のご相談は、<br class="sp">お電話またはSNSのDMにて承ります。</p>
+        <p class="contact__tel">TEL <a href="tel:0000000000">000-000-0000</a></p>
+        <p class="contact__hours">受付時間 12:00〜20:00(火曜定休)</p>
         <ul class="sns">
           <li><a href="#" class="sns__icon" aria-label="X">𝕏</a></li>
           <li><a href="#" class="sns__icon" aria-label="Instagram"><img src="images/instagram.svg" alt=""></a></li>
         </ul>
       </div>
     </section>
+
+    <div class="fixed-bg fixed-bg--4" aria-hidden="true"></div>
   </main>
 
   <!-- ========== フッター ========== -->
   <footer class="footer">
     <ul class="footer__nav">
       <li><a href="#concept">ひだまり</a></li>
-      <li><a href="#concept">猫の紹介</a></li>
+      <li><a href="#cats">猫の紹介</a></li>
       <li><a href="#price">料金</a></li>
       <li><a href="#info">入店のご案内</a></li>
       <li><a href="#news">おしらせ</a></li>
-      <li><a href="#concept">里親希望の方へ</a></li>
-      <li><a href="#sns">Contact</a></li>
+      <li><a href="#foster">里親希望の方へ</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="footer__logo"><img src="images/brand-mark.svg" alt=""> 猫カフェ ねこのひだまり</div>
     <small class="footer__copy">&copy; 2026 CATCAFE HIDAMARI</small>
   </footer>
+
+  <script>
+    // スマホ: メニューのリンクを押したら全画面メニューを閉じる
+    document.querySelectorAll('.nav__list a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
 
 </body>
 </html>
